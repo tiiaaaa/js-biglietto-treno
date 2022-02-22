@@ -8,7 +8,6 @@ const bornYear = prompt("Quando sei nato?");
 let age = 2022 - parseInt(bornYear);
 console.log(age);
 document.getElementById("my-age").innerHTML += age;
-
 // Variabile per prezzo del biglietto
 let ticketPrice = howManyKm * 0.21;
 console.log(ticketPrice);
@@ -21,9 +20,10 @@ if (age < 18) {
     console.log("sconto 20%");
     // Assegnata variabile al prezzo scontato SE  si ha meno di 18 anni
     let discountedPrice = ticketPrice - (ticketPrice / 100 * 20);
-    document.getElementById("my-discounted-ticket-price").innerHTML += Math.ceil(discountedPrice);
+    document.getElementById("my-discounted-ticket-price").innerHTML += Math.ceil(discountedPrice); 
 } else if (age > 65) {
     console.log("40%");
+    // Assegnata variabile al prezzo scontato SE  si ha più di 65 anni
     discountedPrice = ticketPrice - (ticketPrice / 100 * 40);
     document.getElementById("my-discounted-ticket-price").innerHTML += Math.ceil(discountedPrice);
 } else {
